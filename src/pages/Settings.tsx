@@ -3,6 +3,15 @@ import { useMd3Theme } from '@/md3'
 import { Bell, ChevronRight, Globe, HelpCircle, Info, Moon, Shield, Smartphone, Sun, Volume2, Wifi } from 'lucide-react'
 import { useState } from 'react'
 
+const ACCENT_COLORS = [
+  { name: 'Purple',  key: undefined, light: '#6750A4', dark: '#D0BCFF' },
+  { name: 'Green',   key: 'green',   light: '#146C2E', dark: '#9CD49B' },
+  { name: 'Olive',   key: 'olive',   light: '#6A5C16', dark: '#D4C66F' },
+  { name: 'Mauve',   key: 'mauve',   light: '#7D5260', dark: '#EFB8C8' },
+  { name: 'Blue',    key: 'blue',    light: '#005FAF', dark: '#9FCAFF' },
+  { name: 'Red',     key: 'red',     light: '#B3261E', dark: '#F2B8B5' },
+]
+
 export default function Settings() {
   const { resolvedMode, toggleMode } = useMd3Theme()
   const [sound, setSound] = useState(true)
@@ -48,15 +57,28 @@ export default function Settings() {
             <div>
               <span className="text-base text-[var(--md3-onSurface)] block mb-2">Accent Color</span>
               <div className="flex flex-wrap gap-2">
-                {['#6750A4', '#146C2E', '#6A5C16', '#7D5260', '#005FAF', '#B3261E'].map(c => (
+                {ACCENT_COLORS.map(c => (
                   <button
-                    key={c}
-                    className="w-10 h-10 rounded-xl border-2 border-transparent focus-visible:ring-2 focus-visible:ring-[var(--md3-primary)] transition-transform active:scale-90"
-                    style={{ backgroundColor: c }}
+                    key={c.name}
+                    aria-label={c.name}
+                    className="w-10 h-10 rounded-xl border-2 border-transparent focus-visible:ring-2 focus-visible:ring-[var(--md3-primary)] transition-transform active:scale-90 cursor-pointer"
+                    style={{ backgroundColor: resolvedMode === 'dark' ? c.dark : c.light }}
                     onClick={() => {
-                      document.documentElement.style.setProperty('--md3-primary', c)
-                      document.documentElement.style.setProperty('--md3-primaryContainer', c + '22')
-                      document.documentElement.style.setProperty('--md3-surfaceTint', c)
+                      const root = document.documentElement
+                      // 1. Remove any stale inline md3 properties
+                      const styles = root.style
+                      for (let i = styles.length - 1; i >= 0; i--) {
+                        const prop = styles.item(i)
+                        if (prop.startsWith('--md3-')) {
+                          styles.removeProperty(prop)
+                        }
+                      }
+                      // 2. Switch accent via data attribute so CSS handles all derived tokens
+                      if (c.key) {
+                        root.setAttribute('data-accent', c.key)
+                      } else {
+                        root.removeAttribute('data-accent')
+                      }
                     }}
                   />
                 ))}

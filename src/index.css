@@ -43,6 +43,9 @@
     --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* ============================================================
+   MD3 Baseline Tokens — Light
+   ============================================================ */
 :root {
     --radius: 0.625rem;
     --background: oklch(1 0 0);
@@ -77,7 +80,7 @@
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
 
-    /* MD3 tokens */
+    /* MD3 tokens — Purple (baseline) */
     --md3-primary: #6750A4;
     --md3-onPrimary: #FFFFFF;
     --md3-primaryContainer: #EADDFF;
@@ -117,6 +120,9 @@
     --md3-surfaceDim: #DED8E1;
 }
 
+/* ============================================================
+   MD3 Baseline Tokens — Dark
+   ============================================================ */
 .dark {
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
@@ -150,7 +156,6 @@
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
 
-    /* MD3 dark tokens */
     --md3-primary: #D0BCFF;
     --md3-onPrimary: #381E72;
     --md3-primaryContainer: #4F378B;
@@ -190,12 +195,150 @@
     --md3-surfaceDim: #141218;
 }
 
+/* ============================================================
+   Accent Colour Overrides — Green
+   ============================================================ */
+:root[data-accent="green"] {
+    --md3-primary: #146C2E;
+    --md3-onPrimary: #FFFFFF;
+    --md3-primaryContainer: #D5E8CF;
+    --md3-onPrimaryContainer: #0A1F0E;
+    --md3-inversePrimary: #9CD49B;
+    --md3-surfaceTint: #146C2E;
+}
+.dark[data-accent="green"] {
+    --md3-primary: #9CD49B;
+    --md3-onPrimary: #113212;
+    --md3-primaryContainer: #1D4A1D;
+    --md3-onPrimaryContainer: #D5E8CF;
+    --md3-inversePrimary: #146C2E;
+    --md3-surfaceTint: #9CD49B;
+}
+
+/* ============================================================
+   Accent Colour Overrides — Olive
+   ============================================================ */
+:root[data-accent="olive"] {
+    --md3-primary: #6A5C16;
+    --md3-onPrimary: #FFFFFF;
+    --md3-primaryContainer: #F3EEB0;
+    --md3-onPrimaryContainer: #1F1A00;
+    --md3-inversePrimary: #D4C66F;
+    --md3-surfaceTint: #6A5C16;
+}
+.dark[data-accent="olive"] {
+    --md3-primary: #D4C66F;
+    --md3-onPrimary: #242100;
+    --md3-primaryContainer: #4A4310;
+    --md3-onPrimaryContainer: #F3EEB0;
+    --md3-inversePrimary: #6A5C16;
+    --md3-surfaceTint: #D4C66F;
+}
+
+/* ============================================================
+   Accent Colour Overrides — Mauve
+   ============================================================ */
+:root[data-accent="mauve"] {
+    --md3-primary: #7D5260;
+    --md3-onPrimary: #FFFFFF;
+    --md3-primaryContainer: #FFD8E4;
+    --md3-onPrimaryContainer: #31111D;
+    --md3-inversePrimary: #EFB8C8;
+    --md3-surfaceTint: #7D5260;
+}
+.dark[data-accent="mauve"] {
+    --md3-primary: #EFB8C8;
+    --md3-onPrimary: #492532;
+    --md3-primaryContainer: #633B48;
+    --md3-onPrimaryContainer: #FFD8E4;
+    --md3-inversePrimary: #7D5260;
+    --md3-surfaceTint: #EFB8C8;
+}
+
+/* ============================================================
+   Accent Colour Overrides — Blue
+   ============================================================ */
+:root[data-accent="blue"] {
+    --md3-primary: #005FAF;
+    --md3-onPrimary: #FFFFFF;
+    --md3-primaryContainer: #D0E4FF;
+    --md3-onPrimaryContainer: #001D38;
+    --md3-inversePrimary: #9FCAFF;
+    --md3-surfaceTint: #005FAF;
+}
+.dark[data-accent="blue"] {
+    --md3-primary: #9FCAFF;
+    --md3-onPrimary: #00315C;
+    --md3-primaryContainer: #004883;
+    --md3-onPrimaryContainer: #D0E4FF;
+    --md3-inversePrimary: #005FAF;
+    --md3-surfaceTint: #9FCAFF;
+}
+
+/* ============================================================
+   Accent Colour Overrides — Red
+   ============================================================ */
+:root[data-accent="red"] {
+    --md3-primary: #B3261E;
+    --md3-onPrimary: #FFFFFF;
+    --md3-primaryContainer: #F9DEDC;
+    --md3-onPrimaryContainer: #410E0B;
+    --md3-inversePrimary: #F2B8B5;
+    --md3-surfaceTint: #B3261E;
+}
+.dark[data-accent="red"] {
+    --md3-primary: #F2B8B5;
+    --md3-onPrimary: #601410;
+    --md3-primaryContainer: #8C1D18;
+    --md3-onPrimaryContainer: #F9DEDC;
+    --md3-inversePrimary: #B3261E;
+    --md3-surfaceTint: #F2B8B5;
+}
+
+/* Accent-derived MD3 roles used by app surfaces and tonal controls. */
+:root[data-accent] {
+    --md3-secondary: var(--md3-primary);
+    --md3-onSecondary: var(--md3-onPrimary);
+    --md3-secondaryContainer: var(--md3-primaryContainer);
+    --md3-onSecondaryContainer: var(--md3-onPrimaryContainer);
+    --md3-background: color-mix(in srgb, var(--md3-primary) 3%, #FFFFFF);
+    --md3-surface: var(--md3-background);
+    --md3-surfaceContainerLowest: #FFFFFF;
+    --md3-surfaceContainerLow: color-mix(in srgb, var(--md3-primary) 5%, #FFFFFF);
+    --md3-surfaceContainer: color-mix(in srgb, var(--md3-primary) 8%, #FFFFFF);
+    --md3-surfaceContainerHigh: color-mix(in srgb, var(--md3-primary) 10%, #FFFFFF);
+    --md3-surfaceContainerHighest: color-mix(in srgb, var(--md3-primary) 12%, #FFFFFF);
+    --md3-surfaceBright: color-mix(in srgb, var(--md3-primary) 2%, #FFFFFF);
+    --md3-surfaceDim: color-mix(in srgb, var(--md3-primary) 12%, #E7E0EC);
+    --md3-surfaceVariant: color-mix(in srgb, var(--md3-primary) 16%, #F7F2FA);
+    --md3-outlineVariant: color-mix(in srgb, var(--md3-primary) 20%, #CAC4D0);
+}
+
+.dark[data-accent] {
+    --md3-secondary: var(--md3-primary);
+    --md3-onSecondary: var(--md3-onPrimary);
+    --md3-secondaryContainer: var(--md3-primaryContainer);
+    --md3-onSecondaryContainer: var(--md3-onPrimaryContainer);
+    --md3-background: color-mix(in srgb, var(--md3-primary) 9%, #121212);
+    --md3-surface: var(--md3-background);
+    --md3-surfaceContainerLowest: color-mix(in srgb, var(--md3-primary) 4%, #0F0D13);
+    --md3-surfaceContainerLow: color-mix(in srgb, var(--md3-primary) 7%, #141218);
+    --md3-surfaceContainer: color-mix(in srgb, var(--md3-primary) 10%, #1D1B20);
+    --md3-surfaceContainerHigh: color-mix(in srgb, var(--md3-primary) 13%, #211F26);
+    --md3-surfaceContainerHighest: color-mix(in srgb, var(--md3-primary) 16%, #2B2930);
+    --md3-surfaceBright: color-mix(in srgb, var(--md3-primary) 16%, #3B383E);
+    --md3-surfaceDim: color-mix(in srgb, var(--md3-primary) 5%, #141218);
+    --md3-surfaceVariant: color-mix(in srgb, var(--md3-primary) 16%, #49454F);
+    --md3-outlineVariant: color-mix(in srgb, var(--md3-primary) 12%, #49454F);
+}
+
 @layer base {
     * {
         @apply border-border outline-ring/50;
     }
     body {
-        @apply bg-background text-foreground;
+        background-color: var(--md3-background);
+        color: var(--md3-onBackground);
     }
 }
 

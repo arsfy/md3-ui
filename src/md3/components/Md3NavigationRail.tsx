@@ -12,7 +12,7 @@ const Md3NavigationRail = forwardRef<HTMLDivElement, Md3NavigationRailProps>(
         ref={ref}
         className={cn(
           'fixed left-0 top-0 bottom-0 z-50 flex w-22 flex-col items-center gap-3',
-          'bg-(--md3-surface) border-r border-(--md3-outlineVariant)',
+          'bg-[var(--md3-surface)] border-r border-[var(--md3-outlineVariant)]',
           'py-3',
           className,
         )}
@@ -42,8 +42,8 @@ const Md3NavigationRailItem = forwardRef<HTMLButtonElement, Md3NavigationRailIte
         className={cn(
           'flex flex-col items-center justify-center gap-1 w-14 h-14 rounded-none transition-colors',
           active
-            ? 'text-(--md3-onSecondaryContainer)'
-            : 'text-(--md3-onSurfaceVariant) hover:text-(--md3-onSurface)',
+            ? 'text-[var(--md3-onSurface)]'
+            : 'text-[var(--md3-onSurfaceVariant)] hover:text-[var(--md3-onSurface)]',
           className,
         )}
         {...props}
@@ -51,7 +51,7 @@ const Md3NavigationRailItem = forwardRef<HTMLButtonElement, Md3NavigationRailIte
         <span
           className={cn(
             'flex items-center justify-center h-8 w-14 rounded-2xl transition-colors',
-            active && 'bg-(--md3-secondaryContainer)',
+            active && 'bg-[var(--md3-secondaryContainer)] text-[var(--md3-onSecondaryContainer)]',
           )}
         >
           {icon}
