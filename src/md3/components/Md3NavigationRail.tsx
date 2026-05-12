@@ -12,7 +12,7 @@ const Md3NavigationRail = forwardRef<HTMLDivElement, Md3NavigationRailProps>(
         ref={ref}
         className={cn(
           'fixed left-0 top-0 bottom-0 z-50 flex w-22 flex-col items-center gap-3',
-          'bg-[var(--md3-surface)] border-r border-[var(--md3-outlineVariant)]',
+          'bg-(--md3-surface)',
           'py-3',
           className,
         )}

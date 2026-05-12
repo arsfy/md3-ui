@@ -7,10 +7,19 @@ import {
   Md3CardHeader,
   Md3CardTitle,
   Md3Chip,
+  Md3Dialog,
+  Md3DialogClose,
+  Md3DialogContent,
+  Md3DialogDescription,
+  Md3DialogFooter,
+  Md3DialogHeader,
+  Md3DialogTitle,
+  Md3DialogTrigger,
   Md3FAB,
   Md3IconButton,
   Md3ListItem,
   Md3Switch,
+  md3Toast,
 } from '@/md3'
 import {
   Bell,
@@ -243,6 +252,101 @@ export default function Components() {
               <span className="text-base text-[var(--md3-onSurface)]">Auto Save</span>
               <Md3Switch disabled />
             </div>
+          </Md3CardContent>
+        </Md3Card>
+      </Section>
+
+      {/* Dialogs */}
+      <Section title="Dialogs">
+        <Md3Card variant="outlined">
+          <Md3CardContent className="p-5 flex flex-wrap gap-3">
+            <Md3Dialog>
+              <Md3DialogTrigger asChild>
+                <Md3Button variant="filled">Open Dialog</Md3Button>
+              </Md3DialogTrigger>
+              <Md3DialogContent>
+                <Md3DialogHeader>
+                  <Md3DialogTitle>Discard draft?</Md3DialogTitle>
+                  <Md3DialogDescription>
+                    Your unsaved changes will be removed from this session.
+                  </Md3DialogDescription>
+                </Md3DialogHeader>
+                <Md3DialogFooter>
+                  <Md3DialogClose asChild>
+                    <Md3Button variant="text">Cancel</Md3Button>
+                  </Md3DialogClose>
+                  <Md3DialogClose asChild>
+                    <Md3Button variant="filled">Discard</Md3Button>
+                  </Md3DialogClose>
+                </Md3DialogFooter>
+              </Md3DialogContent>
+            </Md3Dialog>
+
+            <Md3Dialog>
+              <Md3DialogTrigger asChild>
+                <Md3Button variant="tonal">Simple Dialog</Md3Button>
+              </Md3DialogTrigger>
+              <Md3DialogContent showCloseButton={false}>
+                <Md3DialogHeader className="pr-0">
+                  <Md3DialogTitle>Choose account</Md3DialogTitle>
+                  <Md3DialogDescription>
+                    Select the profile used for this workspace.
+                  </Md3DialogDescription>
+                </Md3DialogHeader>
+                <div className="overflow-hidden rounded-xl border border-[var(--md3-outlineVariant)]">
+                  <Md3ListItem headline="Personal" supporting="alex@example.com" />
+                  <div className="mx-4 h-px bg-[var(--md3-outlineVariant)]" />
+                  <Md3ListItem headline="Team" supporting="design@example.com" />
+                </div>
+                <Md3DialogFooter>
+                  <Md3DialogClose asChild>
+                    <Md3Button variant="text">Done</Md3Button>
+                  </Md3DialogClose>
+                </Md3DialogFooter>
+              </Md3DialogContent>
+            </Md3Dialog>
+          </Md3CardContent>
+        </Md3Card>
+      </Section>
+
+      {/* Toasts */}
+      <Section title="Toasts">
+        <Md3Card variant="outlined">
+          <Md3CardContent className="p-5 flex flex-wrap gap-3">
+            <Md3Button
+              variant="filled"
+              onClick={() =>
+                md3Toast.success('Saved changes', {
+                  description: 'Your component settings were updated.',
+                })
+              }
+            >
+              Success Toast
+            </Md3Button>
+            <Md3Button
+              variant="tonal"
+              onClick={() =>
+                md3Toast('Draft archived', {
+                  description: 'The item moved to archive.',
+                  action: {
+                    label: 'Undo',
+                    onClick: () => md3Toast.info('Archive undone'),
+                  },
+                })
+              }
+            >
+              Action Toast
+            </Md3Button>
+            <Md3Button
+              variant="outlined"
+              onClick={() =>
+                md3Toast.error('Upload failed', {
+                  description: 'Check your connection and try again.',
+                })
+              }
+            >
+              Error Toast
+            </Md3Button>
           </Md3CardContent>
         </Md3Card>
       </Section>

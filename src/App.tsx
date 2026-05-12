@@ -13,6 +13,7 @@ import {
   Md3NavigationBarItem,
   Md3NavigationRail,
   Md3NavigationRailItem,
+  Md3Toaster,
 } from './md3'
 import {
   LayoutDashboard,
@@ -107,6 +108,8 @@ function App() {
           ))}
         </Md3NavigationBar>
       </div>
+
+      <Md3Toaster />
     </div>
   )
 }

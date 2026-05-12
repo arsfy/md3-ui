@@ -12,3 +12,16 @@ export { Md3NavigationBar, Md3NavigationBarItem } from './components/Md3Navigati
 export { Md3NavigationRail, Md3NavigationRailItem } from './components/Md3NavigationRail'
 export { Md3ListItem } from './components/Md3ListItem'
 export { Md3IconButton } from './components/Md3IconButton'
+export {
+  Md3Dialog,
+  Md3DialogClose,
+  Md3DialogContent,
+  Md3DialogDescription,
+  Md3DialogFooter,
+  Md3DialogHeader,
+  Md3DialogOverlay,
+  Md3DialogPortal,
+  Md3DialogTitle,
+  Md3DialogTrigger,
+} from './components/Md3Dialog'
+export { Md3Toaster, md3Toast } from './components/Md3Toast'
