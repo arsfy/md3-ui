@@ -34,6 +34,17 @@ export { Md3NavigationBar, Md3NavigationBarItem } from './components/Md3Navigati
 export { Md3NavigationRail, Md3NavigationRailItem } from './components/Md3NavigationRail';
 export { Md3Pagination } from './components/Md3Pagination';
 export { Md3Switch } from './components/Md3Switch';
+export {
+    Md3Tabs,
+    Md3TabsContent,
+    Md3TabsContentSmart,
+    Md3TabsList,
+    Md3TabsListSmart,
+    Md3TabsRoot,
+    Md3TabsTrigger,
+    Md3TabsTriggerSmart,
+    md3TabsTriggerVariants,
+} from './components/Md3Tabs';
 export { Md3TextField } from './components/Md3TextField';
 export { Md3Toaster, md3Toast } from './components/Md3Toast';
 export { Md3ThemeProvider, useMd3Theme } from './Md3ThemeProvider';

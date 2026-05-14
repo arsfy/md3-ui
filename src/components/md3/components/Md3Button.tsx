@@ -4,7 +4,7 @@ import { type ButtonHTMLAttributes, forwardRef, type ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
 const md3ButtonVariants = cva(
-    'inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--md3-primary) disabled:pointer-events-none disabled:opacity-40',
+    "relative isolate inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap font-medium transition-[background-color,box-shadow,color,transform] duration-200 ease-out select-none cursor-pointer touch-manipulation before:pointer-events-none before:absolute before:inset-0 before:bg-current before:opacity-0 before:transition-opacity before:duration-150 before:content-[''] active:scale-[0.98] active:duration-100 active:before:opacity-[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--md3-primary) disabled:pointer-events-none disabled:opacity-40 disabled:active:scale-100",
     {
         variants: {
             variant: {

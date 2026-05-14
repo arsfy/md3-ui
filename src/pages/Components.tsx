@@ -34,6 +34,10 @@ import {
     Md3ListItem,
     Md3Pagination,
     Md3Switch,
+    Md3TabsContentSmart,
+    Md3TabsListSmart,
+    Md3TabsRoot,
+    Md3TabsTriggerSmart,
     Md3TextField,
     md3Toast,
 } from '@/components/md3';
@@ -54,6 +58,7 @@ export default function Components() {
     const [sw2, setSw2] = useState(false);
     const [textValue, setTextValue] = useState('');
     const [page, setPage] = useState(1);
+    const [tabValue, setTabValue] = useState('photos');
 
     return (
         <div className='pb-28 lg:pb-8'>
@@ -65,6 +70,54 @@ export default function Components() {
                     Material Design 3 component library showcase
                 </p>
             </div>
+
+            {/* Tabs */}
+            <Section title='Tabs'>
+                <Md3Card variant='outlined'>
+                    <Md3TabsRoot value={tabValue} onValueChange={setTabValue}>
+                        <Md3TabsListSmart>
+                            <Md3TabsTriggerSmart value='photos' icon={<Home className='w-4 h-4' />}>
+                                Photos
+                            </Md3TabsTriggerSmart>
+                            <Md3TabsTriggerSmart value='videos' icon={<Star className='w-4 h-4' />}>
+                                Videos
+                            </Md3TabsTriggerSmart>
+                            <Md3TabsTriggerSmart
+                                value='files'
+                                icon={<Settings className='w-4 h-4' />}
+                            >
+                                Files
+                            </Md3TabsTriggerSmart>
+                        </Md3TabsListSmart>
+                        <Md3CardContent className='p-5'>
+                            <Md3TabsContentSmart value='photos'>
+                                <div className='flex items-center justify-center h-24 rounded-lg bg-(--md3-primaryContainer) text-(--md3-onPrimaryContainer)'>
+                                    <Home className='w-8 h-8' />
+                                </div>
+                                <p className='mt-3 text-sm text-(--md3-onSurfaceVariant)'>
+                                    Your photos collection appears here.
+                                </p>
+                            </Md3TabsContentSmart>
+                            <Md3TabsContentSmart value='videos'>
+                                <div className='flex items-center justify-center h-24 rounded-lg bg-(--md3-secondaryContainer) text-(--md3-onSecondaryContainer)'>
+                                    <Star className='w-8 h-8' />
+                                </div>
+                                <p className='mt-3 text-sm text-(--md3-onSurfaceVariant)'>
+                                    Your videos collection appears here.
+                                </p>
+                            </Md3TabsContentSmart>
+                            <Md3TabsContentSmart value='files'>
+                                <div className='flex items-center justify-center h-24 rounded-lg bg-(--md3-tertiaryContainer) text-(--md3-onTertiaryContainer)'>
+                                    <Settings className='w-8 h-8' />
+                                </div>
+                                <p className='mt-3 text-sm text-(--md3-onSurfaceVariant)'>
+                                    Your files collection appears here.
+                                </p>
+                            </Md3TabsContentSmart>
+                        </Md3CardContent>
+                    </Md3TabsRoot>
+                </Md3Card>
+            </Section>
 
             {/* Buttons */}
             <Section title='Buttons'>
