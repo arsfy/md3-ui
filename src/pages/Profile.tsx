@@ -94,7 +94,7 @@ export default function Profile() {
                     Preferences
                 </h3>
                 <Md3Card variant='outlined' className='mt-3'>
-                    <div className='px-4 py-3 flex items-center justify-between min-h-[56px]'>
+                    <div className='px-4 py-3 flex items-center justify-between min-h-14'>
                         <div className='flex items-center gap-4'>
                             <Moon className='w-6 h-6 text-(--md3-onSurfaceVariant)' />
                             <span className='text-base text-(--md3-onSurface)'>Dark Mode</span>
@@ -102,7 +102,7 @@ export default function Profile() {
                         <Md3Switch checked={resolvedMode === 'dark'} onChange={toggleMode} />
                     </div>
                     <div className='mx-4 h-px bg-(--md3-outlineVariant)' />
-                    <div className='px-4 py-3 flex items-center justify-between min-h-[56px]'>
+                    <div className='px-4 py-3 flex items-center justify-between min-h-14'>
                         <div className='flex items-center gap-4'>
                             <Mail className='w-6 h-6 text-(--md3-onSurfaceVariant)' />
                             <span className='text-base text-(--md3-onSurface)'>
@@ -115,7 +115,7 @@ export default function Profile() {
                         />
                     </div>
                     <div className='mx-4 h-px bg-(--md3-outlineVariant)' />
-                    <div className='px-4 py-3 flex items-center justify-between min-h-[56px]'>
+                    <div className='px-4 py-3 flex items-center justify-between min-h-14'>
                         <div className='flex items-center gap-4'>
                             <Globe className='w-6 h-6 text-(--md3-onSurfaceVariant)' />
                             <span className='text-base text-(--md3-onSurface)'>
