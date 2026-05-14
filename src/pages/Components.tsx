@@ -32,6 +32,7 @@ import {
     Md3FAB,
     Md3IconButton,
     Md3ListItem,
+    Md3Pagination,
     Md3Switch,
     Md3TextField,
     md3Toast,
@@ -52,6 +53,7 @@ export default function Components() {
     const [sw1, setSw1] = useState(true);
     const [sw2, setSw2] = useState(false);
     const [textValue, setTextValue] = useState('');
+    const [page, setPage] = useState(1);
 
     return (
         <div className='pb-28 lg:pb-8'>
@@ -95,6 +97,24 @@ export default function Components() {
                     </Md3Button>
                     <Md3Button variant='tonal' icon>
                         <Share2 className='w-5 h-5' />
+                    </Md3Button>
+                </div>
+                <div className='mt-3 flex flex-wrap gap-3'>
+                    <Md3Button variant='filled' leadingIcon={<Plus className='w-4 h-4' />}>
+                        Add Item
+                    </Md3Button>
+                    <Md3Button variant='outlined' trailingIcon={<Heart className='w-4 h-4' />}>
+                        Favorite
+                    </Md3Button>
+                    <Md3Button
+                        variant='tonal'
+                        leadingIcon={<Search className='w-4 h-4' />}
+                        trailingIcon={<Check className='w-4 h-4' />}
+                    >
+                        Search
+                    </Md3Button>
+                    <Md3Button variant='text' leadingIcon={<Trash2 className='w-4 h-4' />}>
+                        Delete
                     </Md3Button>
                 </div>
             </Section>
@@ -436,6 +456,24 @@ export default function Components() {
                         headline='Notifications'
                         supporting='3 unread messages'
                     />
+                </Md3Card>
+            </Section>
+
+            {/* Pagination */}
+            <Section title='Pagination'>
+                <Md3Card variant='outlined'>
+                    <Md3CardContent className='p-5 flex flex-col items-center gap-6'>
+                        <Md3Pagination page={page} totalPages={12} onPageChange={setPage} />
+                        <div className='text-sm text-(--md3-onSurfaceVariant)'>
+                            Current page: {page}
+                        </div>
+                        <Md3Pagination
+                            page={page}
+                            totalPages={5}
+                            onPageChange={setPage}
+                            showFirstLast={false}
+                        />
+                    </Md3CardContent>
                 </Md3Card>
             </Section>
         </div>

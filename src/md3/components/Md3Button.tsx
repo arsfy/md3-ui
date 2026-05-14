@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from 'class-variance-authority';
-import { type ButtonHTMLAttributes, forwardRef } from 'react';
+import { type ButtonHTMLAttributes, forwardRef, type ReactNode } from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -36,16 +36,25 @@ const md3ButtonVariants = cva(
 
 export interface Md3ButtonProps
     extends ButtonHTMLAttributes<HTMLButtonElement>,
-        VariantProps<typeof md3ButtonVariants> {}
+        VariantProps<typeof md3ButtonVariants> {
+    leadingIcon?: ReactNode;
+    trailingIcon?: ReactNode;
+}
 
 const Md3Button = forwardRef<HTMLButtonElement, Md3ButtonProps>(
-    ({ className, variant, size, icon, ...props }, ref) => {
+    ({ className, variant, size, icon, leadingIcon, trailingIcon, children, ...props }, ref) => {
+        const hasIconOnly = !!icon || (!children && !!(leadingIcon || trailingIcon));
+
         return (
             <button
                 ref={ref}
-                className={cn(md3ButtonVariants({ variant, size, icon }), className)}
+                className={cn(md3ButtonVariants({ variant, size, icon: hasIconOnly }), className)}
                 {...props}
-            />
+            >
+                {!hasIconOnly && leadingIcon}
+                {children}
+                {!hasIconOnly && trailingIcon}
+            </button>
         );
     }
 );

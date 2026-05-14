@@ -105,9 +105,7 @@ export default function Profile() {
                     <div className='px-4 py-3 flex items-center justify-between min-h-14'>
                         <div className='flex items-center gap-4'>
                             <Mail className='w-6 h-6 text-(--md3-onSurfaceVariant)' />
-                            <span className='text-base text-(--md3-onSurface)'>
-                                Notifications
-                            </span>
+                            <span className='text-base text-(--md3-onSurface)'>Notifications</span>
                         </div>
                         <Md3Switch
                             checked={notifications}

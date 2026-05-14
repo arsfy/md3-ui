@@ -9,8 +9,7 @@ const md3FabVariants = cva(
         variants: {
             variant: {
                 primary: 'bg-(--md3-primaryContainer) text-(--md3-onPrimaryContainer)',
-                secondary:
-                    'bg-(--md3-secondaryContainer) text-(--md3-onSecondaryContainer)',
+                secondary: 'bg-(--md3-secondaryContainer) text-(--md3-onSecondaryContainer)',
                 tertiary: 'bg-(--md3-tertiaryContainer) text-(--md3-onTertiaryContainer)',
                 surface: 'bg-(--md3-surfaceContainerLowest) text-(--md3-primary)',
             },

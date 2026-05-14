@@ -45,8 +45,7 @@ const Md3NavigationBarItem = forwardRef<HTMLButtonElement, Md3NavigationBarItemP
                 <span
                     className={cn(
                         'flex items-center justify-center h-8 w-16 rounded-2xl transition-colors',
-                        active &&
-                            'bg-(--md3-secondaryContainer) text-(--md3-onSecondaryContainer)'
+                        active && 'bg-(--md3-secondaryContainer) text-(--md3-onSecondaryContainer)'
                     )}
                 >
                     {icon}

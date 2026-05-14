@@ -240,9 +240,7 @@ const Md3TextField = forwardRef<HTMLInputElement | HTMLTextAreaElement, Md3TextF
                         id={helperId}
                         className={cn(
                             'mt-1 px-4 text-xs tracking-[0.4px]',
-                            isError
-                                ? 'text-(--md3-error)'
-                                : 'text-(--md3-onSurfaceVariant)'
+                            isError ? 'text-(--md3-error)' : 'text-(--md3-onSurfaceVariant)'
                         )}
                     >
                         {helper}
