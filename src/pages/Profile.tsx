@@ -23,7 +23,7 @@ import {
     Md3ListItem,
     Md3Switch,
     useMd3Theme,
-} from '@/md3';
+} from '@/components/md3';
 
 export default function Profile() {
     const { resolvedMode, toggleMode } = useMd3Theme();

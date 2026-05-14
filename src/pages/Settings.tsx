@@ -24,7 +24,7 @@ import {
     Md3ListItem,
     Md3Switch,
     useMd3Theme,
-} from '@/md3';
+} from '@/components/md3';
 
 const ACCENT_COLORS = [
     { name: 'Purple', key: undefined, light: '#6750A4', dark: '#D0BCFF' },

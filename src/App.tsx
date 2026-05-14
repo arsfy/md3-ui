@@ -19,7 +19,7 @@ import {
     Md3NavigationRail,
     Md3NavigationRailItem,
     Md3Toaster,
-} from './md3';
+} from './components/md3';
 import Components from './pages/Components';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';

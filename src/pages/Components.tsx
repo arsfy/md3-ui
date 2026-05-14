@@ -36,7 +36,7 @@ import {
     Md3Switch,
     Md3TextField,
     md3Toast,
-} from '@/md3';
+} from '@/components/md3';
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
     return (

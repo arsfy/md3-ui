@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 
-import { Md3Button, Md3Card, Md3CardContent, Md3Chip, Md3FAB, Md3ListItem } from '@/md3';
+import { Md3Button, Md3Card, Md3CardContent, Md3Chip, Md3FAB, Md3ListItem } from '@/components/md3';
 
 function StatCard({
     icon,
