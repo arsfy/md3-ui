@@ -4,13 +4,13 @@ import { forwardRef, type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 
 const md3CardVariants = cva(
-    'bg-[var(--md3-surfaceContainerLowest)] text-[var(--md3-onSurface)] transition-shadow',
+    'bg-(--md3-surfaceContainerLowest) text-(--md3-onSurface) transition-shadow',
     {
         variants: {
             variant: {
                 elevated: 'shadow-md hover:shadow-lg',
-                filled: 'bg-[var(--md3-surfaceContainerHighest)]',
-                outlined: 'border border-[var(--md3-outlineVariant)]',
+                filled: 'bg-(--md3-surfaceContainerHighest)',
+                outlined: 'border border-(--md3-outlineVariant)',
             },
         },
         defaultVariants: {
@@ -58,7 +58,7 @@ const Md3CardTitle = forwardRef<HTMLHeadingElement, HTMLAttributes<HTMLHeadingEl
         <h3
             ref={ref}
             className={cn(
-                'text-base font-medium leading-6 tracking-wide text-[var(--md3-onSurface)]',
+                'text-base font-medium leading-6 tracking-wide text-(--md3-onSurface)',
                 className
             )}
             {...props}
@@ -72,7 +72,7 @@ const Md3CardDescription = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLP
         <p
             ref={ref}
             className={cn(
-                'text-sm leading-5 tracking-[0.25px] text-[var(--md3-onSurfaceVariant)] mt-1',
+                'text-sm leading-5 tracking-[0.25px] text-(--md3-onSurfaceVariant) mt-1',
                 className
             )}
             {...props}

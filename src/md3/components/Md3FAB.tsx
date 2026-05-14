@@ -4,15 +4,15 @@ import { type ButtonHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
 const md3FabVariants = cva(
-    'inline-flex items-center justify-center gap-2 rounded-2xl font-medium shadow-lg cursor-pointer transition-all hover:shadow-xl active:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--md3-primary)] disabled:pointer-events-none disabled:opacity-40',
+    'inline-flex items-center justify-center gap-2 rounded-2xl font-medium shadow-lg cursor-pointer transition-all hover:shadow-xl active:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--md3-primary) disabled:pointer-events-none disabled:opacity-40',
     {
         variants: {
             variant: {
-                primary: 'bg-[var(--md3-primaryContainer)] text-[var(--md3-onPrimaryContainer)]',
+                primary: 'bg-(--md3-primaryContainer) text-(--md3-onPrimaryContainer)',
                 secondary:
-                    'bg-[var(--md3-secondaryContainer)] text-[var(--md3-onSecondaryContainer)]',
-                tertiary: 'bg-[var(--md3-tertiaryContainer)] text-[var(--md3-onTertiaryContainer)]',
-                surface: 'bg-[var(--md3-surfaceContainerLowest)] text-[var(--md3-primary)]',
+                    'bg-(--md3-secondaryContainer) text-(--md3-onSecondaryContainer)',
+                tertiary: 'bg-(--md3-tertiaryContainer) text-(--md3-onTertiaryContainer)',
+                surface: 'bg-(--md3-surfaceContainerLowest) text-(--md3-primary)',
             },
             size: {
                 default: 'h-14 px-5 text-sm',

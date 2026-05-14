@@ -4,16 +4,16 @@ import { type ButtonHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
 const md3IconButtonVariants = cva(
-    'inline-flex items-center justify-center rounded-full cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--md3-primary)] disabled:pointer-events-none disabled:opacity-40',
+    'inline-flex items-center justify-center rounded-full cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--md3-primary) disabled:pointer-events-none disabled:opacity-40',
     {
         variants: {
             variant: {
                 standard:
-                    'h-10 w-10 text-[var(--md3-onSurfaceVariant)] hover:bg-[var(--md3-onSurfaceVariant)]/10',
-                filled: 'h-10 w-10 bg-[var(--md3-primary)] text-[var(--md3-onPrimary)] hover:shadow-md',
-                tonal: 'h-10 w-10 bg-[var(--md3-secondaryContainer)] text-[var(--md3-onSecondaryContainer)] hover:shadow-sm',
+                    'h-10 w-10 text-(--md3-onSurfaceVariant) hover:bg-(--md3-onSurfaceVariant)/10',
+                filled: 'h-10 w-10 bg-(--md3-primary) text-(--md3-onPrimary) hover:shadow-md',
+                tonal: 'h-10 w-10 bg-(--md3-secondaryContainer) text-(--md3-onSecondaryContainer) hover:shadow-sm',
                 outlined:
-                    'h-10 w-10 border border-[var(--md3-outline)] text-[var(--md3-onSurfaceVariant)] hover:bg-[var(--md3-onSurfaceVariant)]/5',
+                    'h-10 w-10 border border-(--md3-outline) text-(--md3-onSurfaceVariant) hover:bg-(--md3-onSurfaceVariant)/5',
             },
             size: {
                 default: '',

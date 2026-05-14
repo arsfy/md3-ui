@@ -12,7 +12,7 @@ const Md3AppBar = forwardRef<HTMLDivElement, Md3AppBarProps>(
             <header
                 ref={ref}
                 className={cn(
-                    'sticky top-0 z-50 bg-[var(--md3-surface)] text-[var(--md3-onSurface)]',
+                    'sticky top-0 z-50 bg-(--md3-surface) text-(--md3-onSurface)',
                     variant === 'small' && 'h-16 px-4 flex items-center shadow-sm',
                     variant === 'medium' &&
                         'pt-6 pb-4 px-4 flex flex-col justify-end shadow-sm min-h-[112px]',
@@ -33,7 +33,7 @@ const Md3AppBarTitle = forwardRef<HTMLHeadingElement, HTMLAttributes<HTMLHeading
     ({ className, ...props }, ref) => (
         <h1
             ref={ref}
-            className={cn('text-[var(--md3-onSurface)] font-normal tracking-[0px]', className)}
+            className={cn('text-(--md3-onSurface) font-normal tracking-[0px]', className)}
             {...props}
         />
     )

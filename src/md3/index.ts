@@ -33,6 +33,7 @@ export { Md3ListItem } from './components/Md3ListItem';
 export { Md3NavigationBar, Md3NavigationBarItem } from './components/Md3NavigationBar';
 export { Md3NavigationRail, Md3NavigationRailItem } from './components/Md3NavigationRail';
 export { Md3Switch } from './components/Md3Switch';
+export { Md3TextField } from './components/Md3TextField';
 export { Md3Toaster, md3Toast } from './components/Md3Toast';
 export { Md3ThemeProvider, useMd3Theme } from './Md3ThemeProvider';
 export {

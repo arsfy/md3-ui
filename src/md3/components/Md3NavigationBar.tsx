@@ -11,7 +11,7 @@ const Md3NavigationBar = forwardRef<HTMLDivElement, Md3NavigationBarProps>(
                 ref={ref}
                 className={cn(
                     'fixed bottom-0 left-0 right-0 z-50 flex h-20 items-center justify-around',
-                    'bg-[var(--md3-surfaceContainer)] border-t border-[var(--md3-outlineVariant)]',
+                    'bg-(--md3-surfaceContainer) border-t border-(--md3-outlineVariant)',
                     'pb-safe',
                     className
                 )}
@@ -36,8 +36,8 @@ const Md3NavigationBarItem = forwardRef<HTMLButtonElement, Md3NavigationBarItemP
                 className={cn(
                     'flex flex-col items-center justify-center gap-0.5 h-14 min-w-[64px] px-3 rounded-2xl transition-colors',
                     active
-                        ? 'text-[var(--md3-onSurface)]'
-                        : 'text-[var(--md3-onSurfaceVariant)] hover:text-[var(--md3-onSurface)]',
+                        ? 'text-(--md3-onSurface)'
+                        : 'text-(--md3-onSurfaceVariant) hover:text-(--md3-onSurface)',
                     className
                 )}
                 {...props}
@@ -46,7 +46,7 @@ const Md3NavigationBarItem = forwardRef<HTMLButtonElement, Md3NavigationBarItemP
                     className={cn(
                         'flex items-center justify-center h-8 w-16 rounded-2xl transition-colors',
                         active &&
-                            'bg-[var(--md3-secondaryContainer)] text-[var(--md3-onSecondaryContainer)]'
+                            'bg-(--md3-secondaryContainer) text-(--md3-onSecondaryContainer)'
                     )}
                 >
                     {icon}

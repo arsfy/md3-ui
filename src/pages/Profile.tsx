@@ -35,7 +35,7 @@ export default function Profile() {
             {/* Profile header */}
             <div className='px-4 pt-6 pb-6 flex flex-col items-center'>
                 <div className='relative'>
-                    <div className='h-24 w-24 rounded-full bg-[var(--md3-primaryContainer)] text-[var(--md3-onPrimaryContainer)] flex items-center justify-center text-3xl font-medium'>
+                    <div className='h-24 w-24 rounded-full bg-(--md3-primaryContainer) text-(--md3-onPrimaryContainer) flex items-center justify-center text-3xl font-medium'>
                         <User className='w-10 h-10' />
                     </div>
                     <div className='absolute bottom-0 right-0'>
@@ -44,10 +44,10 @@ export default function Profile() {
                         </Md3IconButton>
                     </div>
                 </div>
-                <h2 className='mt-4 text-2xl font-normal tracking-[-0.25px] text-[var(--md3-onSurface)]'>
+                <h2 className='mt-4 text-2xl font-normal tracking-[-0.25px] text-(--md3-onSurface)'>
                     Alex Chen
                 </h2>
-                <p className='mt-1 text-sm text-[var(--md3-onSurfaceVariant)] tracking-[0.25px]'>
+                <p className='mt-1 text-sm text-(--md3-onSurfaceVariant) tracking-[0.25px]'>
                     alex.chen@example.com
                 </p>
                 <div className='mt-3 flex gap-2'>
@@ -61,7 +61,7 @@ export default function Profile() {
 
             {/* Account info */}
             <div className='px-4'>
-                <h3 className='text-sm font-medium tracking-[0.1px] text-[var(--md3-onSurface)] uppercase'>
+                <h3 className='text-sm font-medium tracking-[0.1px] text-(--md3-onSurface) uppercase'>
                     Account Info
                 </h3>
                 <Md3Card variant='outlined' className='mt-3'>
@@ -71,14 +71,14 @@ export default function Profile() {
                         supporting='alex.chen@example.com'
                         trailing={<ChevronRight className='w-5 h-5' />}
                     />
-                    <div className='mx-4 h-px bg-[var(--md3-outlineVariant)]' />
+                    <div className='mx-4 h-px bg-(--md3-outlineVariant)' />
                     <Md3ListItem
                         leading={<Smartphone className='w-6 h-6' />}
                         headline='Phone Number'
                         supporting='+1 234 **** 890'
                         trailing={<ChevronRight className='w-5 h-5' />}
                     />
-                    <div className='mx-4 h-px bg-[var(--md3-outlineVariant)]' />
+                    <div className='mx-4 h-px bg-(--md3-outlineVariant)' />
                     <Md3ListItem
                         leading={<MapPin className='w-6 h-6' />}
                         headline='Location'
@@ -90,22 +90,22 @@ export default function Profile() {
 
             {/* Preferences */}
             <div className='px-4 mt-6'>
-                <h3 className='text-sm font-medium tracking-[0.1px] text-[var(--md3-onSurface)] uppercase'>
+                <h3 className='text-sm font-medium tracking-[0.1px] text-(--md3-onSurface) uppercase'>
                     Preferences
                 </h3>
                 <Md3Card variant='outlined' className='mt-3'>
                     <div className='px-4 py-3 flex items-center justify-between min-h-[56px]'>
                         <div className='flex items-center gap-4'>
-                            <Moon className='w-6 h-6 text-[var(--md3-onSurfaceVariant)]' />
-                            <span className='text-base text-[var(--md3-onSurface)]'>Dark Mode</span>
+                            <Moon className='w-6 h-6 text-(--md3-onSurfaceVariant)' />
+                            <span className='text-base text-(--md3-onSurface)'>Dark Mode</span>
                         </div>
                         <Md3Switch checked={resolvedMode === 'dark'} onChange={toggleMode} />
                     </div>
-                    <div className='mx-4 h-px bg-[var(--md3-outlineVariant)]' />
+                    <div className='mx-4 h-px bg-(--md3-outlineVariant)' />
                     <div className='px-4 py-3 flex items-center justify-between min-h-[56px]'>
                         <div className='flex items-center gap-4'>
-                            <Mail className='w-6 h-6 text-[var(--md3-onSurfaceVariant)]' />
-                            <span className='text-base text-[var(--md3-onSurface)]'>
+                            <Mail className='w-6 h-6 text-(--md3-onSurfaceVariant)' />
+                            <span className='text-base text-(--md3-onSurface)'>
                                 Notifications
                             </span>
                         </div>
@@ -114,11 +114,11 @@ export default function Profile() {
                             onChange={(e) => setNotifications(e.target.checked)}
                         />
                     </div>
-                    <div className='mx-4 h-px bg-[var(--md3-outlineVariant)]' />
+                    <div className='mx-4 h-px bg-(--md3-outlineVariant)' />
                     <div className='px-4 py-3 flex items-center justify-between min-h-[56px]'>
                         <div className='flex items-center gap-4'>
-                            <Globe className='w-6 h-6 text-[var(--md3-onSurfaceVariant)]' />
-                            <span className='text-base text-[var(--md3-onSurface)]'>
+                            <Globe className='w-6 h-6 text-(--md3-onSurfaceVariant)' />
+                            <span className='text-base text-(--md3-onSurface)'>
                                 Location Services
                             </span>
                         </div>
@@ -132,7 +132,7 @@ export default function Profile() {
 
             {/* Security */}
             <div className='px-4 mt-6'>
-                <h3 className='text-sm font-medium tracking-[0.1px] text-[var(--md3-onSurface)] uppercase'>
+                <h3 className='text-sm font-medium tracking-[0.1px] text-(--md3-onSurface) uppercase'>
                     Security & Privacy
                 </h3>
                 <Md3Card variant='outlined' className='mt-3'>
@@ -142,14 +142,14 @@ export default function Profile() {
                         supporting='Last changed 30 days ago'
                         trailing={<ChevronRight className='w-5 h-5' />}
                     />
-                    <div className='mx-4 h-px bg-[var(--md3-outlineVariant)]' />
+                    <div className='mx-4 h-px bg-(--md3-outlineVariant)' />
                     <Md3ListItem
                         leading={<CreditCard className='w-6 h-6' />}
                         headline='Payment Methods'
                         supporting='2 cards linked'
                         trailing={<ChevronRight className='w-5 h-5' />}
                     />
-                    <div className='mx-4 h-px bg-[var(--md3-outlineVariant)]' />
+                    <div className='mx-4 h-px bg-(--md3-outlineVariant)' />
                     <Md3ListItem
                         leading={<Shield className='w-6 h-6' />}
                         headline='Privacy Settings'
@@ -161,7 +161,7 @@ export default function Profile() {
 
             {/* Support */}
             <div className='px-4 mt-6'>
-                <h3 className='text-sm font-medium tracking-[0.1px] text-[var(--md3-onSurface)] uppercase'>
+                <h3 className='text-sm font-medium tracking-[0.1px] text-(--md3-onSurface) uppercase'>
                     Help
                 </h3>
                 <Md3Card variant='outlined' className='mt-3'>
@@ -171,7 +171,7 @@ export default function Profile() {
                         supporting='View help documentation'
                         trailing={<ChevronRight className='w-5 h-5' />}
                     />
-                    <div className='mx-4 h-px bg-[var(--md3-outlineVariant)]' />
+                    <div className='mx-4 h-px bg-(--md3-outlineVariant)' />
                     <Md3ListItem
                         leading={<Globe className='w-6 h-6' />}
                         headline='About Us'

@@ -28,7 +28,7 @@ function Md3DialogOverlay({
     return (
         <DialogPrimitive.Overlay
             data-slot='md3-dialog-overlay'
-            className={cn('fixed inset-0 z-50 bg-[var(--md3-scrim)]/40', className)}
+            className={cn('fixed inset-0 z-50 bg-(--md3-scrim)/40', className)}
             {...props}
         />
     );
@@ -50,7 +50,7 @@ function Md3DialogContent({
                 className={cn(
                     'fixed left-1/2 top-1/2 z-50 grid w-[calc(100%-32px)] max-w-[560px]',
                     'gap-6 rounded-[28px]',
-                    'bg-[var(--md3-surfaceContainerHigh)] p-6 text-[var(--md3-onSurface)] shadow-2xl outline-none',
+                    'bg-(--md3-surfaceContainerHigh) p-6 text-(--md3-onSurface) shadow-2xl outline-none',
                     className
                 )}
                 {...props}
@@ -61,9 +61,9 @@ function Md3DialogContent({
                         data-slot='md3-dialog-close'
                         className={cn(
                             'absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full',
-                            'text-[var(--md3-onSurfaceVariant)] transition-colors',
-                            'hover:bg-[var(--md3-onSurface)]/[0.08] focus-visible:outline-none',
-                            'focus-visible:ring-2 focus-visible:ring-[var(--md3-primary)]'
+                            'text-(--md3-onSurfaceVariant) transition-colors',
+                            'hover:bg-(--md3-onSurface)/[0.08] focus-visible:outline-none',
+                            'focus-visible:ring-2 focus-visible:ring-(--md3-primary)'
                         )}
                     >
                         <X className='h-5 w-5' />
@@ -103,7 +103,7 @@ function Md3DialogTitle({
         <DialogPrimitive.Title
             data-slot='md3-dialog-title'
             className={cn(
-                'text-2xl font-normal leading-8 tracking-[0px] text-[var(--md3-onSurface)]',
+                'text-2xl font-normal leading-8 tracking-[0px] text-(--md3-onSurface)',
                 className
             )}
             {...props}
@@ -119,7 +119,7 @@ function Md3DialogDescription({
         <DialogPrimitive.Description
             data-slot='md3-dialog-description'
             className={cn(
-                'text-sm leading-5 tracking-[0.25px] text-[var(--md3-onSurfaceVariant)]',
+                'text-sm leading-5 tracking-[0.25px] text-(--md3-onSurfaceVariant)',
                 className
             )}
             {...props}

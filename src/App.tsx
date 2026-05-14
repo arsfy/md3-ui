@@ -40,7 +40,7 @@ function App() {
     const pageTitle = currentPage?.label || 'MD3 Demo';
 
     return (
-        <div className='min-h-screen bg-[var(--md3-background)] text-[var(--md3-onBackground)]'>
+        <div className='min-h-screen bg-(--md3-background) text-(--md3-onBackground)'>
             {/* Mobile: Top App Bar */}
             <div className='lg:hidden'>
                 <Md3AppBar variant='small'>
@@ -83,7 +83,7 @@ function App() {
             <main className='max-w-3xl mx-auto lg:ml-20 lg:max-w-none lg:mr-0 lg:px-8'>
                 {/* Desktop page title */}
                 <div className='hidden lg:block pt-8 pb-4'>
-                    <h1 className='text-[var(--md3-onSurface)] text-3xl font-normal tracking-[-0.25px]'>
+                    <h1 className='text-(--md3-onSurface) text-3xl font-normal tracking-[-0.25px]'>
                         {pageTitle}
                     </h1>
                 </div>

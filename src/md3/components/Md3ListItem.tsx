@@ -17,19 +17,19 @@ const Md3ListItem = forwardRef<HTMLDivElement, Md3ListItemProps>(
                 ref={ref}
                 className={cn(
                     'flex items-center gap-4 px-4 py-3 min-h-[56px] rounded-none',
-                    'text-[var(--md3-onSurface)] hover:bg-[var(--md3-onSurface)]/[0.04] transition-colors cursor-pointer',
+                    'text-(--md3-onSurface) hover:bg-(--md3-onSurface)/[0.04] transition-colors cursor-pointer',
                     className
                 )}
                 {...props}
             >
                 {leading && (
-                    <span className='flex items-center justify-center w-10 h-10 text-[var(--md3-onSurfaceVariant)]'>
+                    <span className='flex items-center justify-center w-10 h-10 text-(--md3-onSurfaceVariant)'>
                         {leading}
                     </span>
                 )}
                 <div className='flex-1 min-w-0 flex flex-col justify-center'>
                     {overline && (
-                        <span className='text-xs font-medium tracking-[0.5px] leading-4 text-[var(--md3-onSurfaceVariant)]'>
+                        <span className='text-xs font-medium tracking-[0.5px] leading-4 text-(--md3-onSurfaceVariant)'>
                             {overline}
                         </span>
                     )}
@@ -37,13 +37,13 @@ const Md3ListItem = forwardRef<HTMLDivElement, Md3ListItemProps>(
                         {headline}
                     </span>
                     {supporting && (
-                        <span className='text-sm leading-5 tracking-[0.25px] text-[var(--md3-onSurfaceVariant)] truncate'>
+                        <span className='text-sm leading-5 tracking-[0.25px] text-(--md3-onSurfaceVariant) truncate'>
                             {supporting}
                         </span>
                     )}
                 </div>
                 {trailing && (
-                    <span className='flex items-center justify-center text-[var(--md3-onSurfaceVariant)]'>
+                    <span className='flex items-center justify-center text-(--md3-onSurfaceVariant)'>
                         {trailing}
                     </span>
                 )}

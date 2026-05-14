@@ -26,10 +26,10 @@ function Md3Toaster({ position = 'bottom-center', ...props }: ToasterProps) {
                     description: 'text-sm tracking-[0.25px]',
                     actionButton: 'rounded-full',
                     cancelButton: 'rounded-full',
-                    success: 'text-[var(--md3-primary)]',
-                    info: 'text-[var(--md3-primary)]',
-                    warning: 'text-[var(--md3-tertiary)]',
-                    error: 'text-[var(--md3-error)]',
+                    success: 'text-(--md3-primary)',
+                    info: 'text-(--md3-primary)',
+                    warning: 'text-(--md3-tertiary)',
+                    error: 'text-(--md3-error)',
                 },
             }}
             style={

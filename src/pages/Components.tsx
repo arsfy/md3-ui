@@ -33,6 +33,7 @@ import {
     Md3IconButton,
     Md3ListItem,
     Md3Switch,
+    Md3TextField,
     md3Toast,
 } from '@/md3';
 
@@ -50,6 +51,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 export default function Components() {
     const [sw1, setSw1] = useState(true);
     const [sw2, setSw2] = useState(false);
+    const [textValue, setTextValue] = useState('');
 
     return (
         <div className='pb-28 lg:pb-8'>
@@ -113,6 +115,62 @@ export default function Components() {
                         <Heart className='w-5 h-5' />
                     </Md3IconButton>
                 </div>
+            </Section>
+
+            {/* Text Fields */}
+            <Section title='Text Fields'>
+                <Md3Card variant='outlined'>
+                    <Md3CardContent className='p-5 flex flex-col gap-4'>
+                        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+                            <Md3TextField
+                                variant='filled'
+                                label='Username'
+                                placeholder='Enter username'
+                                value={textValue}
+                                onChange={(e) => setTextValue(e.target.value)}
+                            />
+                            <Md3TextField
+                                variant='outlined'
+                                label='Email'
+                                placeholder='Enter email'
+                                type='email'
+                            />
+                            <Md3TextField
+                                variant='filled'
+                                label='Password'
+                                type='password'
+                                leadingIcon={<Search className='w-5 h-5' />}
+                            />
+                            <Md3TextField
+                                variant='outlined'
+                                label='With Error'
+                                error
+                                errorText='This field is required'
+                                leadingIcon={<Settings className='w-5 h-5' />}
+                                trailingIcon={<Bell className='w-5 h-5' />}
+                            />
+                            <Md3TextField
+                                variant='filled'
+                                label='Disabled'
+                                disabled
+                                defaultValue='Read only value'
+                            />
+                            <Md3TextField
+                                variant='outlined'
+                                label='Required'
+                                required
+                                helperText='Helper text goes here'
+                            />
+                        </div>
+                        <Md3TextField
+                            variant='outlined'
+                            label='Multiline'
+                            multiline
+                            rows={4}
+                            placeholder='Type something...'
+                        />
+                    </Md3CardContent>
+                </Md3Card>
             </Section>
 
             {/* Chips */}

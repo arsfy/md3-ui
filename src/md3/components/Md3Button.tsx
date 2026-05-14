@@ -4,17 +4,17 @@ import { type ButtonHTMLAttributes, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
 const md3ButtonVariants = cva(
-    'inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--md3-primary)] disabled:pointer-events-none disabled:opacity-40',
+    'inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-all select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--md3-primary) disabled:pointer-events-none disabled:opacity-40',
     {
         variants: {
             variant: {
-                filled: 'bg-[var(--md3-primary)] text-[var(--md3-onPrimary)] hover:shadow-md active:shadow-sm',
-                tonal: 'bg-[var(--md3-secondaryContainer)] text-[var(--md3-onSecondaryContainer)] hover:shadow-sm active:shadow-none',
+                filled: 'bg-(--md3-primary) text-(--md3-onPrimary) hover:shadow-md active:shadow-sm',
+                tonal: 'bg-(--md3-secondaryContainer) text-(--md3-onSecondaryContainer) hover:shadow-sm active:shadow-none',
                 outlined:
-                    'border border-[var(--md3-outline)] text-[var(--md3-primary)] bg-transparent hover:bg-[var(--md3-primary)]/5 active:bg-[var(--md3-primary)]/10',
-                text: 'text-[var(--md3-primary)] bg-transparent hover:bg-[var(--md3-primary)]/5 active:bg-[var(--md3-primary)]/10',
+                    'border border-(--md3-outline) text-(--md3-primary) bg-transparent hover:bg-(--md3-primary)/5 active:bg-(--md3-primary)/10',
+                text: 'text-(--md3-primary) bg-transparent hover:bg-(--md3-primary)/5 active:bg-(--md3-primary)/10',
                 elevated:
-                    'bg-[var(--md3-surfaceContainerLow)] text-[var(--md3-primary)] shadow-md hover:shadow-lg active:shadow-sm',
+                    'bg-(--md3-surfaceContainerLow) text-(--md3-primary) shadow-md hover:shadow-lg active:shadow-sm',
             },
             size: {
                 default: 'h-10 px-6 text-sm tracking-wide rounded-full',
